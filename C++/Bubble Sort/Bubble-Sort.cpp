@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-int main(){
+void main(){
     int array[5] = {4,3,2,1,0};;
     int size = sizeof(array)/sizeof(array[0]);
     std::cout <<"Array inicial: \n";

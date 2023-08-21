@@ -2,7 +2,6 @@
 #include <iostream>
 #include <stdlib.h>
 
-int main (){
+void main (){
     std::cout <<"Hello, world!"<< std::endl;
-    return 0;
 }

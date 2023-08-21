@@ -20,7 +20,7 @@ int insertionSort(int array[], int size){
     return 0;
 }
 
-int main()
+void main()
 {
     int array[] = {9,8,7,6,5,4,3,2,1,0};
     std::cout << "Array inicial: \n";
@@ -36,6 +36,4 @@ int main()
         std::cout<<array[i];
         
     }
-    
-    return 0;
 }
