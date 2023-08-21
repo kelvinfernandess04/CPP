@@ -25,26 +25,3 @@ void selectionSort(int array[], int size) {
         }
     }
 }
-
-void main() {
-    // Array de exemplo
-    int array[] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
-    std::cout << "Array inicial: \n";
-
-    // Calcula o tamanho do array
-    int arraySize = sizeof(array) / sizeof(array[0]);
-
-    // Exibe o array inicial
-    for (int i = 0; i < arraySize; i++) {
-        std::cout << array[i];
-    }
-
-    // Chama a função selectionSort para ordenar o array
-    selectionSort(array, arraySize);
-    std::cout << "\nArray final: \n";
-
-    // Exibe o array ordenado
-    for (int i = 0; i < arraySize; i++) {
-        std::cout << array[i];
-    }
-}
