@@ -1,48 +1,52 @@
 #include <iostream>
-#include <stdio.h>
+using namespace std;
 #include "C++\Bubble Sort\Bubble-Sort.cpp"
 #include "C++\Insertion Sort\Insertion-Sort.cpp"
 #include "C++\Selection Sort\Selection-Sort.cpp"
 
-int reorganize(int array[], int size){
-    for (int i = 0; i < size/2; i++)
-    {
-        int temp = array[i];
-        array[i] = size-i;
-        array[size-i] = temp;
-    }
-    return 0;
-}
-
 int main() {
-    // Array de exemplo
+    system("cls");
     int array[10] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
-    std::cout << "Array inicial: \n";
-    // Calcula o tamanho do array
     int arraySize = sizeof(array) / sizeof(array[0]);
 
-    // Exibe o array inicial
+    cout << "Array inicial: \n";
     for (int i = 0; i < arraySize; i++) {
-        std::cout << array[i];
+        cout << array[i];
     }
 
-    // Chama as funções para ordenarem o array
-    bubbleSort(array, arraySize);
-    std::cout <<"\nordenação por Bubble sort\n";
-    reorganize(array, arraySize);
-    selectionSort(array, arraySize);
-    std::cout <<"ordenação por Selection sort\n";
-    reorganize(array, arraySize);
-    insertionSort(array, arraySize);
-    std::cout <<"ordenação por Insertion sort\n";
-    std::cout << "\nArray final: \n";
+    int choice;
+    cout << "\nEscolha um método de organização:\nBubble Sort[1] \nSelection Sort[2] \nInsertion Sort[3]\n"; // mensagem para o usuário
+    cin >> choice; // entrada de dados
+    do
+    {
+        switch (choice) { // estrutura de controle para cada caso
+        case 1: //1
+        bubbleSort(array, arraySize);
+        break; 
+        
+        case 2: //2
+        selectionSort(array, arraySize);
+        break; 
+        
+        case 3: //3
+        insertionSort(array, arraySize);
+        break; 
+        
+        default: //qualquer outro número
+        cout << "Escolha inválida\n"; 
+        choice = -1;
+        }
 
+        /* code */
+    } while (choice == -1);
+    
+    
     // Exibe o array ordenado
+    cout << "\nArray final: \n";
     for (int i = 0; i < arraySize; i++) {
-        std::cout << array[i];
+        cout << array[i];
     }
 
-    std::cout << "final";
     return 0;
 }
 

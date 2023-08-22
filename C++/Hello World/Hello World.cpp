@@ -2,6 +2,6 @@
 #include <iostream>
 #include <stdlib.h>
 
-void main (){
+void helloWorld(){
     std::cout <<"Hello, world!"<< std::endl;
 }

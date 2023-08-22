@@ -1,10 +1,7 @@
 #include <iostream>
 
-// Função para ordenar um array usando o algoritmo de seleção (Selection Sort)
 void selectionSort(int array[], int size) {
-    // Loop externo: percorre a matriz da esquerda para a direita
     for (int i = 0; i < size - 1; i++) {
-        // Inicializa o índice do menor elemento como o índice atual (i)
         int minIndex = i;
 
         // Loop interno: encontra o índice do menor elemento na parte não ordenada da matriz

@@ -1,6 +1,5 @@
 #include <iostream>
 
-// Função para ordenar um array usando o algoritmo de inserção (Insertion Sort)
 int insertionSort(int array[], int size) {
     for (int i = 1; i < size; i++) {
         int key = array[i];
