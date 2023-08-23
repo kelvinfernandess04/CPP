@@ -62,17 +62,3 @@ void mergeSort(int arr[], int left, int right) {
     }
 }
 
-int main() {
-    // Aqui você chamaria a função mergeSort para ordenar um array específico.
-    // Por exemplo:
-    int arr[] = {12, 11, 13, 5, 6, 7};
-    int arr_size = sizeof(arr) / sizeof(arr[0]);
-    mergeSort(arr, 0, arr_size - 1);
-
-    // Imprima o array ordenado.
-    for (int i = 0; i < arr_size; i++) {
-        std::cout << arr[i] << " ";
-    }
-
-    return 0;
-}
