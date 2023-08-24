@@ -19,41 +19,36 @@ int main() {
             cout << array[i];
         }
 
-        do
-        {
-            int choice;
-            // mensagem para o usuário
-            cout << "\nEscolha um método de organização"<<
-            "\nBubble Sort[1]"<<
-            " \nSelection Sort[2]"<<
-            "\nInsertion Sort[3]"<<
-            "\nMerge Sort[4]"; 
+        // mensagem para o usuário
+        cout << "\nEscolha um método de organização"<<
+        "\nBubble Sort[1]"<<
+        " \nSelection Sort[2]"<<
+        "\nInsertion Sort[3]"<<
+        "\nMerge Sort[4]"<<
+        "\nSair[Aperte outra tecla]"; 
 
-            cin >> choice; // entrada de dados
-            switch (choice) { // estrutura de controle para cada caso
-            case 1: 
-            bubbleSort(array, arraySize);
-            break; 
-            
-            case 2: 
-            selectionSort(array, arraySize);
-            break; 
-            
-            case 3: 
-            insertionSort(array, arraySize);
-            break; 
+        int choice;
+        cin >> choice; // entrada de dados
+        switch (choice) { // estrutura de controle para cada caso
+        case 1: 
+        bubbleSort(array, arraySize);
+        break; 
+        
+        case 2: 
+        selectionSort(array, arraySize);
+        break; 
+        
+        case 3: 
+        insertionSort(array, arraySize);
+        break; 
 
-            case 4: 
-            mergeSort(array, 0, arraySize);
-            break; 
-            
-            default: //qualquer outro número
-            cout << "Escolha inválida\n"; 
-            choice = -1;
-            }
-
-            /* code */
-        } while (choice == -1);
+        case 4: 
+        mergeSort(array, 0, arraySize);
+        break; 
+        
+        default: //qualquer outro número
+        cout << "Saindo\n";
+        }
         
         
         // Exibe o array ordenado
