@@ -6,7 +6,7 @@ using namespace std;
 #include "C++\Merge Sort\Merge-Sort.cpp"
 
 int main() {
-    bool exit = false;
+    bool exitProgram = false;
     do
     {
         
@@ -25,7 +25,7 @@ int main() {
         " \nSelection Sort[2]"<<
         "\nInsertion Sort[3]"<<
         "\nMerge Sort[4]"<<
-        "\nSair[Aperte outra tecla]"; 
+        "\nSair[Aperte outra tecla]\n"; 
 
         int choice;
         cin >> choice; // entrada de dados
@@ -48,6 +48,7 @@ int main() {
         
         default: //qualquer outro número
         cout << "Saindo\n";
+        exit(0);
         }
         
         
@@ -56,13 +57,13 @@ int main() {
         for (int i = 0; i < arraySize; i++) {
             cout << array[i];
         }
-        cout<<"\nAperte qualquer tecla para refazer ou [S] para Sair";
+        cout<<"\nAperte qualquer tecla para refazer ou [S] para Sair\n";
         char entrada[1];
         cin >> entrada[0];
         if (entrada[0] == 's') 
-            exit = true;
+            exitProgram = true;
         
-    } while (!exit);
+    } while (!exitProgram);
     
     return 0;
 }
