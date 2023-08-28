@@ -1,14 +1,14 @@
 #include <iostream>
 
-void selectionSort(int array[], int size) {
+void selectionSort(int arr[], int size) {
     for (int i = 0; i < size - 1; i++) {
         int minIndex = i;
 
-        // Loop interno: encontra o índice do menor elemento na parte não ordenada da matriz
+        // Loop interno: encontra o índice do menor elemento na parte não ordenada da matriz Quem ler é gay
         for (int j = i + 1; j < size; j++) {
             // Compara o elemento no índice j com o elemento no minIndex
-            if (array[j] < array[minIndex]) {
-                // Se array[j] for menor, atualiza minIndex para j
+            if (arr[j] < arr[minIndex]) {
+                // Se arr[j] for menor, atualiza minIndex para j
                 minIndex = j;
             }
         }
@@ -16,9 +16,9 @@ void selectionSort(int array[], int size) {
         // Verifica se minIndex é diferente de i (ou seja, se um elemento menor foi encontrado)
         if (minIndex != i) {
             // Troca os elementos nos índices i e minIndex para colocar o menor elemento na posição correta
-            int temp = array[i];
-            array[i] = array[minIndex];
-            array[minIndex] = temp;
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
         }
     }
 }

@@ -4,6 +4,7 @@ using namespace std;
 #include "C++\Insertion Sort\Insertion-Sort.cpp"
 #include "C++\Selection Sort\Selection-Sort.cpp"
 #include "C++\Merge Sort\Merge-Sort.cpp"
+#include "C++\Quick  Sort\Quick-Sort.cpp"
 
 int main() {
     bool exitProgram = false;
@@ -11,12 +12,12 @@ int main() {
     {
         
         system("cls");
-        int array[10] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
-        int arraySize = sizeof(array) / sizeof(array[0]);
+        int arr[10] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+        int arrSize = sizeof(arr) / sizeof(arr[0]);
 
-        cout << "Array inicial: \n";
-        for (int i = 0; i < arraySize; i++) {
-            cout << array[i];
+        cout << "arr inicial: \n";
+        for (int i = 0; i < arrSize; i++) {
+            cout << arr[i];
         }
 
         // mensagem para o usuário
@@ -25,26 +26,31 @@ int main() {
         " \nSelection Sort[2]"<<
         "\nInsertion Sort[3]"<<
         "\nMerge Sort[4]"<<
+        "\nQuick Sort[5]"<<
         "\nSair[Aperte outra tecla]\n"; 
 
         int choice;
         cin >> choice; // entrada de dados
         switch (choice) { // estrutura de controle para cada caso
         case 1: 
-        bubbleSort(array, arraySize);
+        bubbleSort(arr, arrSize);
         break; 
         
         case 2: 
-        selectionSort(array, arraySize);
+        selectionSort(arr, arrSize);
         break; 
         
         case 3: 
-        insertionSort(array, arraySize);
+        insertionSort(arr, arrSize);
         break; 
 
         case 4: 
-        mergeSort(array, 0, arraySize);
+        mergeSort(arr, 0, arrSize);
         break; 
+
+        case 5:
+        quickSort(arr, 0, arrSize - 1);
+        break;
         
         default: //qualquer outro número
         cout << "Saindo\n";
@@ -52,10 +58,10 @@ int main() {
         }
         
         
-        // Exibe o array ordenado
-        cout << "\nArray final: \n";
-        for (int i = 0; i < arraySize; i++) {
-            cout << array[i];
+        // Exibe o arr ordenado
+        cout << "\narr final: \n";
+        for (int i = 0; i < arrSize; i++) {
+            cout << arr[i];
         }
         cout<<"\nAperte qualquer tecla para refazer ou [S] para Sair\n";
         char entrada[1];
