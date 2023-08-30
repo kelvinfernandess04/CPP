@@ -4,7 +4,7 @@ void selectionSort(int arr[], int size) {
     for (int i = 0; i < size - 1; i++) {
         int minIndex = i;
 
-        // Loop interno: encontra o índice do menor elemento na parte não ordenada da matriz Quem ler é gay
+        // Loop interno: encontra o índice do menor elemento na parte não ordenada da matriz
         for (int j = i + 1; j < size; j++) {
             // Compara o elemento no índice j com o elemento no minIndex
             if (arr[j] < arr[minIndex]) {
