@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
-#include "C++\Bubble Sort\Bubble-Sort.cpp"
-#include "C++\Insertion Sort\Insertion-Sort.cpp"
-#include "C++\Selection Sort\Selection-Sort.cpp"
-#include "C++\Merge Sort\Merge-Sort.cpp"
-#include "C++\Quick  Sort\Quick-Sort.cpp"
+#include "Sorts\Bubble Sort\Bubble-Sort.cpp"
+#include "Sorts\Insertion Sort\Insertion-Sort.cpp"
+#include "Sorts\Selection Sort\Selection-Sort.cpp"
+#include "Sorts\Merge Sort\Merge-Sort.cpp"
+#include "Sorts\Quick  Sort\Quick-Sort.cpp"
 
 int main() {
     bool exitProgram = false;
